@@ -24,6 +24,10 @@ open class Player constructor(
         return this.playerNumber
     }
 
+    fun getPlayerPosition(): String {
+        return this.playerPosition
+    }
+
     override fun toString(): String {
         return this.playerFirstName +
                 this.playerLastName +
