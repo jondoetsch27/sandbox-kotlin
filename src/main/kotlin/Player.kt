@@ -46,11 +46,10 @@ open class Player constructor(
     }
 
     override fun hashCode(): Int {
-        var result: Int = 31 * Objects.hash(this.getPlayerFullName())
-        result += 31 * Objects.hash(this.playerNumber)
-        result += 31 * Objects.hash(this.playerTeam)
-        result += 31 * Objects.hash(this.playerPosition)
-        return result
+        return (31 * Objects.hash(this.getPlayerFullName())
+            + (31 * Objects.hash(this.playerNumber))
+            + (31 * Objects.hash(this.playerTeam))
+            + (31 * Objects.hash(this.playerPosition)))
     }
 
     override fun compareTo(other: Player): Int {
